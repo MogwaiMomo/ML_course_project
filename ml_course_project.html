@@ -361,7 +361,7 @@ Conf_Matrix1</code></pre>
 <p>Our out-of-sample error rate is only ~4% (i.e. 1-Accuracy). That should be good enough to pass our prediction test. That being said, this model does not give us much with which to INTERPRET the relationships between the predictors and the outcome. We can interpret accurately, but we have no idea how we’re doing it!</p>
 </div>
 <div id="step-6-bonus-generalized-boosted-regression-models" class="section level3">
-<h3>STEP 6 (BONUS): Generalized Boosted Regression Models</h3>
+<h3>STEP 5 (BONUS): Generalized Boosted Regression Models</h3>
 <p>GBM models are great because they combine high predictive accuracy with highly interpretable results. The plot() function allows you to actually visually see the importance of certain variables over others. The one disadvantage is that a GBM Model can be computationally expensive and take time to run.</p>
 <pre class="r"><code>set.seed(555)
 gbm_fit &lt;- train(classe ~ .,
