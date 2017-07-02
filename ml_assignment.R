@@ -106,7 +106,7 @@ Conf_Matrix1
 # Our out-of-sample error rate is only ~4% (i.e. 1-Accuracy). That should be good enough to pass our prediction test. That being said, this model does not give us much with which to INTERPRET the relationships between the predictors and the outcome. We can interpret accurately, but we have no idea how we're doing it!
 
 
-### STEP 6 (BONUS): MODELLING WITH GBM (FOR BETTER INTERPRETATION)
+### STEP 6 (BONUS): Generalized Boosted Regression Models
 
 # GBM models are great because they combine high predictive accuracy with highly interpretable results. The plot() function allows you to actually visually see the importance of certain variables over others. The one disadvantage is that a GBM Model can be computationally expensive and take time to run. 
 
@@ -122,6 +122,7 @@ gbm_fit <- train(classe ~ .,
 
 fit_classes2 <- predict(gbm_fit, newdata = test)
 Conf_Matrix2 <- confusionMatrix(fit_classes2, test$classe)
+Conf_Matrix2
 
 # Again, our out-of-sample accuracy is only marginally better than what we got with KNN (0.9613 vs 0.9592). 
 
